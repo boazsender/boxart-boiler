@@ -62,8 +62,8 @@ export default class Rect {
     const topDiff = this.top - last.top;
     if (last.width !== this.width || last.height !== this.height) {
       const {width, height} = this;
-      const widthScale = last.width / width;
-      const heightScale = last.height / height;
+      const widthScale = width / last.width;
+      const heightScale = height / last.height;
       if (last.angle !== this.angle) {
         const angleDiff = this.angle - last.angle;
         transform = `translate3d(${leftDiff}px, ${topDiff}px, 0)` +
